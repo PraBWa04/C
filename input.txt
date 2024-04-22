@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+  char tab[20];
+  char temp[20];
+  FILE *ptr;
+  ptr = fopen("input.txt", "w+");
+  
+  for (int i = 0; i <20; ++i){
+    printf("enter sym: ");
+    scanf("%c", &temp[i]);
+    
+    if (temp[i] == 'q'|| temp[i] == 'Q') {
+      break;
+    }else{
+      tab[i] = temp[i];
+      fprintf(ptr, "%c", tab[i]);
+    }
+  }
+  
+}
